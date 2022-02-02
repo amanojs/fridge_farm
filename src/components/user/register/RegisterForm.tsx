@@ -61,6 +61,7 @@ const RegisterForm: FC = () => {
     };
 
     return (
+        // TODO: スマホサイズの時にはこのカードを画面フルで表示するようにしたほうがいいかもしれない
         <Card className="w-full h-full p-5 md:w-3/4 md:mb-20 lg:w-2/4">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mx-auto sm:w-2/6 md:w-4/6 lg:w-2/6 flex justify-center">
@@ -72,7 +73,7 @@ const RegisterForm: FC = () => {
                     fullWidth
                     variant="outlined"
                     label={`ニックネーム（${ruleVal.nickname.minLength}文字以上${ruleVal.nickname.maxLength}文字以下）`}
-                    color="warning"
+                    color="primary"
                     error={Boolean(errors.nickname)}
                     helperText={errors.nickname?.message}
                     {...register('nickname', validateRule.nickname)}
@@ -81,7 +82,7 @@ const RegisterForm: FC = () => {
                 <div className="pt-5">
                     <Button
                         type="submit"
-                        color="warning"
+                        color="primary"
                         size="large"
                         variant="contained"
                         disableElevation
