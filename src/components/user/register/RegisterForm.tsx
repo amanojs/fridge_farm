@@ -65,7 +65,7 @@ const RegisterForm: FC = () => {
     };
 
     return (
-        <Card className="w-full min-h-screen md:h-full p-5 md:w-3/4 md:mb-20 lg:w-2/4 lg:px-10 lg:pb-9">
+        <Card className="w-full min-h-screen md:min-h-full p-5 md:w-3/4 md:mb-20 lg:w-2/4 lg:px-10 lg:pb-9">
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mx-auto sm:w-2/6 md:w-4/6 lg:w-2/6 flex justify-center">
                     <Image src={FridgeIcon} alt="fridge_logo" />
